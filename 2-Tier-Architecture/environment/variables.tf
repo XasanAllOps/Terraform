@@ -1,5 +1,5 @@
 variable "aws_region" {
-  type        = string
+  type = string
   validation {
     condition     = can(regex("^eu-", var.aws_region))
     error_message = "The aws_region value must be a valid region in the europe, starting with \"eu-\"."

@@ -59,7 +59,7 @@ Terraform/
 - An existing key pair in AWS EC2 (`key_name`)  
 
 ## Notes
-- Defaults to region `eu-west-2`  
+- Defaults to region `ANY YOU CHOOSE`  
 - User data installs Apache and prints hostname  
 - Best used in a non-production/staging AWS account 
 
