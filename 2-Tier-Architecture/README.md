@@ -6,6 +6,7 @@ This project provisions a **2-tier architecture** on AWS using Terraform. It’s
 
 ## 📁 Project Structure
 
+```
 Terraform/
 ├── 2-Tier-Architecture/
 │ ├── modules/
@@ -19,4 +20,4 @@ Terraform/
 │ └── variables.tf 
 ├── README.md
 └── .gitignore
-
+```
