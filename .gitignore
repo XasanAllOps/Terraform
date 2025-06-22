@@ -1,0 +1,34 @@
+# Local .terraform directories
+**/.terraform/*
+!.terraform/modules/**
+
+# Terraform plan files
+*.tfplan
+
+# Terraform state files (handled separately if you're using remote backend)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Backup files
+*.backup
+
+# Override files (optional, used for local customization)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore .terraform.lock.hcl if you're okay regenerating it per environment
+.terraform.lock.hcl
+
+# IDE/editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
