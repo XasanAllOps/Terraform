@@ -116,7 +116,7 @@ prod_plan:
     - terraform plan -var="db_username=$DB_USERNAME" -var="db_password=$DB_PASSWORD" -out="planfile"
   artifacts:
     paths: ["DevOps Project/environment/prod/planfile"]
-    expires_in: 1 hour
+    expire_in: 1 hour
 
 prod_apply:
   stage: apply
