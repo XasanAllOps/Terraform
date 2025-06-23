@@ -73,5 +73,5 @@ variable "db_password" {
 }
 
 variable "rds_subnet_group_name" {
-  type      = string
+  type = string
 }

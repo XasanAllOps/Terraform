@@ -45,7 +45,7 @@ resource "aws_lb_target_group" "target_group" {
   vpc_id   = var.vpc_id
 }
 
-  resource "aws_lb_target_group_attachment" "tg_attachment_test" {
+resource "aws_lb_target_group_attachment" "tg_attachment_test" {
   count            = length(var.instance_target_id)
   target_group_arn = aws_lb_target_group.target_group.arn
   target_id        = var.instance_target_id[count.index].id

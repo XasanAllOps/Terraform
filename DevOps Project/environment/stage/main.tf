@@ -20,12 +20,12 @@ provider "aws" {
 }
 
 module "network" {
-  source              = "../../modules/network"
-  environment         = var.environment
-  vpc_name            = var.vpc_name
-  vpc_cidr            = var.vpc_cidr
-  public_subnet_cidr  = var.public_subnet_cidr
-  private_subnet_cidr = var.private_subnet_cidr
+  source                = "../../modules/network"
+  environment           = var.environment
+  vpc_name              = var.vpc_name
+  vpc_cidr              = var.vpc_cidr
+  public_subnet_cidr    = var.public_subnet_cidr
+  private_subnet_cidr   = var.private_subnet_cidr
   rds_subnet_group_name = var.rds_subnet_group_name
 }
 

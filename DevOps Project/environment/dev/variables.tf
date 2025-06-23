@@ -63,7 +63,7 @@ variable "db_name" {
 }
 
 variable "db_username" {
-  type      = string
+  type = string
 }
 
 variable "db_password" {
@@ -72,5 +72,5 @@ variable "db_password" {
 }
 
 variable "rds_subnet_group_name" {
-  type      = string
+  type = string
 }
