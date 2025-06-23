@@ -41,7 +41,7 @@ dev_apply:
   needs: [dev_plan]
   environment:
     name: dev
-    action: deploy
+    action: start
   script:
     - cd "DevOps Project/environment/dev"
     - terraform apply --auto-approve -input=false "planfile"
@@ -82,7 +82,7 @@ stage_apply:
   needs: [stage_plan]
   environment:
     name: stage
-    action: deploy
+    action: start
   script:
     - cd "DevOps Project/environment/stage"
     - terraform apply --auto-approve -input=false "planfile"
@@ -123,7 +123,7 @@ prod_apply:
   needs: [prod_plan]
   environment:
     name: prod
-    action: deploy
+    action: start
   script:
     - cd "DevOps Project/environment/prod"
     - terraform apply --auto-approve -input=false "planfile"
