@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket = "xasan-terraform-bucket"
     key    = "prod/terraform.state"
-    region = "eu-west-1"
+    region = "eu-west-2"
   }
 }
 

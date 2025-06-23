@@ -1,10 +1,10 @@
 # -- STAGING ✍🏽 -- #
 
 environment         = "STAGE"
-aws_region          = "eu-west-1"
+aws_region          = "eu-west-2"
 instance_type       = "t2.medium"
 ec2_instance        = "Nginx"
-key_name            = "lxasan1992"
+key_name            = "my_key"
 vpc_name            = "VPC"
 vpc_cidr            = "172.31.0.0/16"
 public_subnet_cidr  = ["172.31.0.0/20", "172.31.16.0/20"]
