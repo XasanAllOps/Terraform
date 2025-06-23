@@ -1,7 +1,7 @@
 # -- DEVELOPMENT ✍🏽 -- #
 
 environment           = "DEV"
-aws_region            = "eu-west-2"
+aws_region            = "eu-west-1"
 instance_type         = "t2.micro"
 ec2_instance          = "Nginx"
 key_name              = "lxasan1992"

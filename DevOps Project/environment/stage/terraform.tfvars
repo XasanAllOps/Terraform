@@ -1,7 +1,7 @@
 # -- STAGING ✍🏽 -- #
 
 environment         = "STAGE"
-aws_region          = "eu-west-2"
+aws_region          = "eu-west-1"
 instance_type       = "t2.medium"
 ec2_instance        = "Nginx"
 key_name            = "lxasan1992"

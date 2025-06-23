@@ -1,7 +1,7 @@
 # -- PRODUCTION ✍🏽 -- #
 
 environment         = "PROD"
-aws_region          = "eu-west-2"
+aws_region          = "eu-west-1"
 instance_type       = "m5.large"
 ec2_instance        = "Nginx"
 key_name            = "lxasan1992"
