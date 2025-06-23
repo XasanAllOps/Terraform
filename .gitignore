@@ -21,9 +21,6 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Ignore .terraform.lock.hcl if you're okay regenerating it per environment
-.terraform.lock.hcl
-
 # IDE/editor specific
 .vscode/
 .idea/
