@@ -60,3 +60,34 @@ This project integrates with **GitLab CI/CD** to automate Terraform workflows:
 **Benefits of CI/CD in this project:**
 
 - **Error reduction:** Automation prevents manual mistakes and enforces best practices.
+- **Repeatable deployments:** Ensures consistency across environments.
+- **Traceability:** All infrastructure changes are version-controlled and auditable.
+- **Collaboration:** Teams can review and approve changes before deployment, improving transparency and quality.
+
+## Additional Details
+
+- The `install_nginx.sh` script is used in the compute module to bootstrap EC2 instances with NGINX.
+- Terraform backend state is managed remotely using an S3 bucket with environment-specific keys for safety.
+- Security groups are configured to allow controlled access between layers (e.g., ALB to EC2, EC2 to RDS).
+- Autoscaling and load balancing ensure availability and scalability of the application tier.
+
+## Getting Started
+
+1. Configure AWS credentials with appropriate permissions.
+2. Customize variables in the respective environment folders (`dev`, `stage`, or `prod`).
+3. Run Terraform commands within the chosen environment folder:
+
+   ```bash
+   terraform init
+   terraform plan
+   terraform apply --auto-approve
+   terraform destroy --auto-approve
+
+## Conclusion
+
+This project provides a clean, scalable foundation for managing AWS infrastructure using Terraform modules and CI/CD best practices. It demonstrates how to maintain multiple environments safely and efficiently while enabling fast, reliable infrastructure delivery.
+
+## Credits
+
+This project was inspired by the work of DeenEngineers community
+Big thanks to them for the valuable guidance and foundational ideas that helped shape this project.
