@@ -44,6 +44,7 @@ module "ecs_service" {
         {
           name          = "nginx"
           containerPort = 80
+          # --- hostPort = 8080 | If you want containerPort to be 8080 must have hostPort set to 8080 as well
           protocol      = "tcp"
         }
       ]
@@ -61,9 +62,11 @@ module "ecs_service" {
         }
       }
 
-      healthCheck = {
+      # --- earlier I set health_check which could have been an error.
+      healthCheck = {  
         enabled     = true
-        command     = ["CMD-SHELL", "curl -f http://localhost:80/ || exit 1"]
+        command     = ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+        # --- originally I set http://localhost:80/ did not work but this way was fine
         interval    = 30
         timeout     = 5
         retries     = 3
@@ -75,7 +78,7 @@ module "ecs_service" {
         options = {
           awslogs-group         = aws_cloudwatch_log_group.nginx.name
           awslogs-region        = "eu-west-1"
-          awslogs-stream-prefix = "nginx-service"
+          awslogs-stream-prefix = "ecs"
         }
       }
     }
@@ -111,3 +114,8 @@ module "ecs_service" {
     }
   }
 }
+
+
+# --- Gitlab => IAM user for Gitlab (OIDC) | w
+# --- DockerFile => builds image => | test trivy (warnings) | => ECR | 
+# --- Workflows (Gitlab) => One main pipeline running small workflows
