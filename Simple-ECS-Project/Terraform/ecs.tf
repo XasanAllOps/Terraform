@@ -114,8 +114,3 @@ module "ecs_service" {
     }
   }
 }
-
-
-# --- Gitlab => IAM user for Gitlab (OIDC) | w
-# --- DockerFile => builds image => | test trivy (warnings) | => ECR | 
-# --- Workflows (Gitlab) => One main pipeline running small workflows
